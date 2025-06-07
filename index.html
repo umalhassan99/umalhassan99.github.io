@@ -1,104 +1,124 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>حسينية وموكب أم الحسن</title>
   <style>
     body {
-      background-color: #111;
-      color: white;
-      font-family: 'Cairo', sans-serif;
       margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #111;
+      color: #f9f9f9;
     }
+
     header {
       background-color: #222;
-      padding: 1rem;
+      padding: 1rem 0;
       text-align: center;
+      border-bottom: 2px solid gold;
     }
-    nav {
-      background-color: #000;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
+
+    header h1 {
       color: gold;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
+      margin: 0;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #000;
+      border-top: 1px solid gold;
+      border-bottom: 1px solid gold;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
     section {
       padding: 2rem;
-      border-bottom: 1px solid #333;
+      text-align: center;
     }
-    h1, h2 {
-      color: gold;
-    }
+
     footer {
-      background-color: #222;
+      background-color: #000;
+      color: gray;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
-      color: #aaa;
+      border-top: 1px solid #444;
+    }
+
+    iframe {
+      max-width: 100%;
+      height: 400px;
+      border: none;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>📿 حسينية وموكب أم الحسن</h1>
-    <p>خدمة الحسين شرف لنا 🌑</p>
   </header>
 
   <nav>
-    <a href="#live">البث المباشر</a>
-    <a href="#majalis">أرشيف المجالس</a>
-    <a href="#poems">القصائد الحسينية</a>
-    <a href="#gallery">المعرض</a>
-    <a href="#about">من نحن</a>
-    <a href="#contact">تواصل معنا</a>
+    <a href="#live">📡 البث المباشر</a>
+    <a href="#majalis">📜 أرشيف المجالس</a>
+    <a href="#qasayed">🎤 القصائد الحسينية</a>
+    <a href="#gallery">🖼️ الصور</a>
+    <a href="#about">📖 من نحن</a>
+    <a href="#contact">📞 تواصل معنا</a>
   </nav>
 
   <section id="live">
-    <h2>📺 البث المباشر</h2>
-    <p>يمكنكم مشاهدة البث المباشر من خلال الرابط التالي:</p>
-    <a href="https://example.com/live" target="_blank" style="color:lightblue">اضغط هنا للبث المباشر</a>
+    <h2>📡 البث المباشر</h2>
+    <p>سيتم بث المجالس مباشرة هنا عند توفرها.</p>
+    <!-- مثال: YouTube Live -->
+    <iframe src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID" allowfullscreen></iframe>
   </section>
 
   <section id="majalis">
     <h2>📜 أرشيف المجالس</h2>
-    <p>تابعوا مجالسنا السابقة على قناتنا في اليوتيوب:</p>
-    <a href="https://youtube.com/@umalhassan" target="_blank" style="color:lightblue">قناة اليوتيوب</a>
+    <p>مشاهدة المجالس السابقة من قناتنا.</p>
+    <a href="https://www.youtube.com/@yourchannel" target="_blank">زيارة قناة اليوتيوب</a>
   </section>
 
-  <section id="poems">
-    <h2>📖 القصائد الحسينية</h2>
-    <p>مجموعة من القصائد بصوت الرواديد وخدام المنبر الحسيني:</p>
-    <ul>
-      <li>قصيدة 1 - <a href="https://youtube.com" target="_blank" style="color:lightblue">استماع</a></li>
-      <li>قصيدة 2 - <a href="https://youtube.com" target="_blank" style="color:lightblue">استماع</a></li>
-    </ul>
+  <section id="qasayed">
+    <h2>🎤 القصائد الحسينية</h2>
+    <p>مجموعة من القصائد الصوتية والمرئية.</p>
+    <a href="https://www.youtube.com/@yourchannel/shorts" target="_blank">مشاهدة القصائد</a>
   </section>
 
   <section id="gallery">
-    <h2>🖼️ المعرض</h2>
-    <p>صور من الفعاليات والمواكب:</p>
-    <p>تابعونا على <a href="https://instagram.com" target="_blank" style="color:lightblue">إنستاغرام</a></p>
+    <h2>🖼️ الصور</h2>
+    <p>تابعنا على Instagram وTelegram لمتابعة الصور:</p>
+    <ul style="list-style: none; padding: 0;">
+      <li><a href="https://t.me/yourtelegram" target="_blank">📷 تليجرام</a></li>
+      <li><a href="https://instagram.com/yourinstagram" target="_blank">📷 انستغرام</a></li>
+    </ul>
   </section>
 
   <section id="about">
-    <h2>💬 من نحن</h2>
-    <p>نحن خدام الحسين عليه السلام، نعمل على نشر المجالس الحسينية وبثها للعالم بكل محبة وإخلاص.</p>
+    <h2>📖 من نحن</h2>
+    <p>موكب وحسينية أم الحسن تأسست لخدمة أهل البيت (ع) عبر المجالس والفعاليات الدينية.</p>
   </section>
 
   <section id="contact">
-    <h2>📬 تواصل معنا</h2>
-    <p>راسلونا عبر البريد: <a href="mailto:umalhassan@example.com" style="color:lightblue">umalhassan@example.com</a></p>
+    <h2>📞 تواصل معنا</h2>
+    <p>📧 البريد الإلكتروني: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>📱 الهاتف: 0000 000 0780</p>
   </section>
 
   <footer>
-    &copy; 2025 حسينية وموكب أم الحسن. جميع الحقوق محفوظة.
+    <p>© 2025 حسينية وموكب أم الحسن. جميع الحقوق محفوظة.</p>
   </footer>
-
 </body>
 </html>
