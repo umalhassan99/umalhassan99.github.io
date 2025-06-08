@@ -1,94 +1,51 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>موكب وحسينية أم الحسن عليها السلام</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet"/>
   <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Cairo', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #222;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      color: gold;
-    }
-    nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      padding: 15px 20px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: gold;
-      color: black;
-    }
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: gold;
-      text-align: center;
-    }
-    .videos iframe {
-      width: 100%;
-      max-width: 500px;
-      margin: 10px auto;
-      display: block;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px;
-      border: 2px solid #fff;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    a.social {
-      display: inline-block;
-      margin: 10px;
-      color: gold;
-    }
-    .ashura {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 8px;
-      line-height: 2;
-      direction: rtl;
-    }
+    body { background:#111; color:#fff; font-family:'Cairo',sans-serif; margin:0; padding:0; }
+    header { background:#222; padding:1rem; text-align:center; font-size:1.8rem; color:gold; }
+    nav { background:#333; display:flex; justify-content:center; flex-wrap:wrap; padding:0.5rem; }
+    nav a { color:#fff; margin:0.3rem 1rem; text-decoration:none; font-weight:bold; }
+    nav a:hover { color:gold; }
+    section { padding:2rem; max-width:900px; margin:auto; }
+    h2 { color:gold; border-bottom:1px solid #444; padding-bottom:0.5rem; margin-bottom:1rem; text-align:center;}
+    .events, .videos, .gallery { margin:1rem 0; }
+    .events li { margin:0.5rem 0; list-style:none; padding:0.3rem; background:#222; border-radius:5px;}
+    iframe { width:100%; max-width:500px; margin:0.5rem auto; display:block; border:none;}
+    .gallery { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .gallery img { max-width:300px; width:100%; border:2px solid #fff; border-radius:5px; }
+    .ashura { background:#1a1a1a; padding:1rem; border-radius:5px; line-height:1.8; max-height:400px; overflow:auto;}
+    footer { text-align:center; padding:1rem; background:#222; color:#aaa; }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    async function fetchEvents() {
+      try {
+        const sheetId = '1ORpqIKI3GC8KEHyE7ee6xmOuWIHSSxEoddWSmf7VyM4';
+        const url = `https://opensheet.elk.sh/${sheetId}/Sheet1`;
+        const res = await axios.get(url);
+        res.data.forEach(ev => {
+          const li = document.createElement('li');
+          li.textContent = ev.التاريخ + ' – ' + ev.الفعالية;
+          document.getElementById('events-list').appendChild(li);
+        });
+      } catch (e) {
+        console.error('خطأ بجلب المناسبات:', e);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', fetchEvents);
+  </script>
 </head>
 <body>
 
   <header>موكب وحسينية أم الحسن عليها السلام</header>
-
   <nav>
     <a href="#about">من نحن</a>
+    <a href="#events">📅 المناسبات</a>
     <a href="#poems">القصائد الحسينية</a>
     <a href="#photos">التغطية الفوتوغرافية</a>
     <a href="#ashura">زيارة عاشوراء</a>
@@ -97,38 +54,38 @@
 
   <section id="about">
     <h2>من نحن</h2>
-    <p>
-      تأسست حسينية وموكب أم الحسن عليها السلام سنة 2008م / 1429 هـ،<br>
-      على يد المرحوم الحاج علي عبدالواحد شايع، في مدينة البصرة - قضاء الفاو.<br>
-      حملنا على عاتقنا رسالة الولاء، وكرّسنا جهدنا لخدمة الحسين وأهل بيته الطاهرين، فكانت الدمعة والراية والسير في طريق العشق الحسيني لا تفتر.
-    </p>
-    <p style="text-align:center; font-style:italic; color:#ccc;">
-      نذرنا الحياةَ لخدمة الحسينْ *** وفي دربهِ ليس نبغي الثمنْ
-    </p>
+    <p>تأسست حسينية وموكب أم الحسن عليها السلام سنة 2008م / 1429 هـ، على يد المرحوم الحاج علي عبدالواحد شايع، في البصرة – قضاء الفاو.</p>
+    <p>نحمل رسالة الولاء لمحمد وآل محمد، ونخدم الحسين (عليه السلام) بكل فخر، ونحيي شعائره بكل إخلاص وتفانٍ.</p>
+    <p style="text-align:center;font-style:italic;color:#ccc;">نذرنا الحياةَ لخدمة الحسينْ *** وفي دربهِ ليس نبغي الثمنْ</p>
+  </section>
+
+  <section id="events">
+    <h2>📅 المناسبات القادمة</h2>
+    <ul class="events" id="events-list"></ul>
   </section>
 
   <section id="poems">
     <h2>القصائد الحسينية</h2>
     <h3>الرادود باسم الكربلائي</h3>
     <div class="videos">
-      <iframe src="https://www.youtube.com/embed/Iudexv2CNfc" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/KEC6mCYnV7k" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/iRjhOYsgfQ8" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/4avizt100HY" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/4lSqcsQqoGw" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Iudexv2CNfc" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/KEC6mCYnV7k" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/iRjhOYsgfQ8" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/4avizt100HY" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/4lSqcsQqoGw" allowfullscreen></iframe>
     </div>
     <h3>الرادود حيدر البياتي</h3>
     <div class="videos">
-      <iframe src="https://www.youtube.com/embed/UmNTr_DDTz8" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/bHUOuPoD3NI" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/Ny96gUKtr4A" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/sduS4UMqRCE" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/3euMciRUaK4" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ZJErHcBajNM" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/u_k6y0lQjLk" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/W4xsyjVdM6E" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/d9DfQTkdD5s" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/pU-r44o1GLI" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/UmNTr_DDTz8" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/bHUOuPoD3NI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Ny96gUKtr4A" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/sduS4UMqRCE" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/3euMciRUaK4" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/ZJErHcBajNM" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/u_k6y0lQjLk" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/W4xsyjVdM6E" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/d9DfQTkdD5s" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/pU-r44o1GLI" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -147,23 +104,19 @@
   <section id="ashura">
     <h2>زيارة عاشوراء</h2>
     <div class="ashura">
-      <!-- سيتم إدراج نص زيارة عاشوراء هنا في الرد التالي لكاملها -->
-      <p>بسم الله الرحمن الرحيم، السلام على الحسين، وعلى علي بن الحسين، وعلى أولاد الحسين، وعلى أصحاب الحسين...</p>
-      <p>...(نص الزيارة كامل سأكمله لك في الرد التالي حتى لا يكون النص طويلًا هنا جدًا)</p>
+      <!-- أدخل النص الكامل هنا بعد إرسال الجزء التالي -->
     </div>
   </section>
 
   <section id="contact">
     <h2>تواصل معنا</h2>
-    <p><a class="social" href="https://www.instagram.com/umalhu7san?igsh=MXQzNmw4cGZsejZ6dQ==" target="_blank">انستغرام</a></p>
-    <p><a class="social" href="https://www.facebook.com/share/19HKZWxaoQ/?mibextid=wwXIfr" target="_blank">فيسبوك</a></p>
-    <p><a class="social" href="https://www.tiktok.com/@umalhu7san?_t=ZS-8woNTmtsrJY&_r=1" target="_blank">تيك توك</a></p>
-    <p><a class="social" href="https://t.me/umalhu7san" target="_blank">تليجرام</a></p>
+    <p><a class="social" href="https://www.instagram.com/umalhu7san?igsh=MXQzNmw4cGZsejZ6dQ==" target="_blank">📸 إنستاغرام</a></p>
+    <p><a class="social" href="https://www.facebook.com/share/19HKZWxaoQ/?mibextid=wwXIfr" target="_blank">📘 فيسبوك</a></p>
+    <p><a class="social" href="https://www.tiktok.com/@umalhu7san?_t=ZS-8woNTmtsrJY&_r=1" target="_blank">🎵 تيك توك</a></p>
+    <p><a class="social" href="https://t.me/umalhu7san" target="_blank">📢 تليجرام</a></p>
   </section>
 
-  <footer>
-    جميع الحقوق محفوظة © 2025 – موكب وحسينية أم الحسن عليها السلام
-  </footer>
+  <footer>جميع الحقوق محفوظة © 2025 – موكب وحسينية أم الحسن عليها السلام</footer>
 
 </body>
 </html>
