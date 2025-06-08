@@ -2,151 +2,168 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>موكب وحسينية أم الحسن عليها السلام</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #111;
-      color: white;
+      color: #fff;
       font-family: 'Cairo', sans-serif;
       margin: 0;
+      padding: 0;
     }
     header {
       background-color: #222;
-      padding: 1rem;
+      padding: 20px;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 24px;
       font-weight: bold;
-      border-bottom: 2px solid #FFD700;
+      color: gold;
     }
     nav {
-      background-color: #000;
+      background-color: #333;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 1rem 0;
-      gap: 1rem;
     }
     nav a {
-      color: #FFD700;
+      color: white;
+      padding: 15px 20px;
       text-decoration: none;
-      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: gold;
+      color: black;
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
+      padding: 30px;
+      max-width: 900px;
       margin: auto;
     }
     h2 {
-      color: #FFD700;
-      border-bottom: 1px solid #444;
-      padding-bottom: .5rem;
+      color: gold;
+      text-align: center;
     }
-    iframe {
+    .videos iframe {
       width: 100%;
-      height: 300px;
-      margin: 1rem 0;
-      border: none;
+      max-width: 500px;
+      margin: 10px auto;
+      display: block;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border: 2px solid #fff;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
     }
-    .gallery img {
-      width: 300px;
-      border: 2px solid #FFD700;
-      border-radius: 5px;
-    }
     footer {
-      background-color: #000;
-      color: #aaa;
+      background-color: #222;
+      color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    a.social {
+      display: inline-block;
+      margin: 10px;
+      color: gold;
+    }
+    .ashura {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      line-height: 2;
+      direction: rtl;
     }
   </style>
 </head>
 <body>
 
-<header>
-  موكب وحسينية أم الحسن عليها السلام
-</header>
+  <header>موكب وحسينية أم الحسن عليها السلام</header>
 
-<nav>
-  <a href="#about">من نحن</a>
-  <a href="#poems">القصائد الحسينية</a>
-  <a href="#photos">التغطية الفوتوغرافية</a>
-  <a href="#ashura">زيارة عاشوراء</a>
-  <a href="#contact">تواصل معنا</a>
-</nav>
+  <nav>
+    <a href="#about">من نحن</a>
+    <a href="#poems">القصائد الحسينية</a>
+    <a href="#photos">التغطية الفوتوغرافية</a>
+    <a href="#ashura">زيارة عاشوراء</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
 
-<section id="about">
-  <h2>من نحن</h2>
-  <p>
-    تأسست حسينية وموكب أم الحسن (عليها السلام) سنة 2008م / 1429هـ، على يد المرحوم الحاج علي عبدالواحد شايع، في مدينة البصرة - قضاء الفاو. <br>
-    منذ لحظة التأسيس، حملت هذه الحسينية على عاتقها نشر الشعائر الحسينية، وتعظيم أمر أهل البيت (عليهم السلام)، بخدمة يملؤها الإخلاص، وكلمة يعلوها الصدق، ودمعةٍ لا تجف على مصاب الحسين وأهل بيته.<br>
-    كانت ولا تزال منبرًا يفيض حبًا وولاءً، ومركزًا يجمع المؤمنين على مائدة الحزن النبيل والولاء العميق.
-  </p>
-</section>
+  <section id="about">
+    <h2>من نحن</h2>
+    <p>
+      تأسست حسينية وموكب أم الحسن عليها السلام سنة 2008م / 1429 هـ،<br>
+      على يد المرحوم الحاج علي عبدالواحد شايع، في مدينة البصرة - قضاء الفاو.<br>
+      حملنا على عاتقنا رسالة الولاء، وكرّسنا جهدنا لخدمة الحسين وأهل بيته الطاهرين، فكانت الدمعة والراية والسير في طريق العشق الحسيني لا تفتر.
+    </p>
+    <p style="text-align:center; font-style:italic; color:#ccc;">
+      نذرنا الحياةَ لخدمة الحسينْ *** وفي دربهِ ليس نبغي الثمنْ
+    </p>
+  </section>
 
-<section id="poems">
-  <h2>القصائد الحسينية</h2>
+  <section id="poems">
+    <h2>القصائد الحسينية</h2>
+    <h3>الرادود باسم الكربلائي</h3>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/Iudexv2CNfc" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/KEC6mCYnV7k" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/iRjhOYsgfQ8" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/4avizt100HY" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/4lSqcsQqoGw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h3>الرادود حيدر البياتي</h3>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/UmNTr_DDTz8" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/bHUOuPoD3NI" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Ny96gUKtr4A" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/sduS4UMqRCE" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/3euMciRUaK4" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/ZJErHcBajNM" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/u_k6y0lQjLk" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/W4xsyjVdM6E" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/d9DfQTkdD5s" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/pU-r44o1GLI" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
 
-  <h3>الرادود باسم الكربلائي</h3>
-  <iframe src="https://www.youtube.com/embed/Iudexv2CNfc" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/KEC6mCYnV7k" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/iRjhOYsgfQ8" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/4avizt100HY" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/4lSqcsQqoGw" allowfullscreen></iframe>
+  <section id="photos">
+    <h2>التغطية الفوتوغرافية</h2>
+    <div class="gallery">
+      <img src="5908827543128099233.jpg" alt="">
+      <img src="5908827543128099234.jpg" alt="">
+      <img src="5908827543128099235.jpg" alt="">
+      <img src="photo4.jpg" alt="">
+      <img src="photo5.jpg" alt="">
+      <img src="photo6.jpg" alt="">
+    </div>
+  </section>
 
-  <h3>الرادود حيدر البياتي</h3>
-  <iframe src="https://www.youtube.com/embed/UmNTr_DDTz8" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/bHUOuPoD3NI" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/Ny96gUKtr4A" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/sduS4UMqRCE" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/3euMciRUaK4" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/ZJErHcBajNM" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/u_k6y0lQjLk" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/W4xsyjVdM6E" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/d9DfQTkdD5s" allowfullscreen></iframe>
-  <iframe src="https://www.youtube.com/embed/pU-r44o1GLI" allowfullscreen></iframe>
-</section>
+  <section id="ashura">
+    <h2>زيارة عاشوراء</h2>
+    <div class="ashura">
+      <!-- سيتم إدراج نص زيارة عاشوراء هنا في الرد التالي لكاملها -->
+      <p>بسم الله الرحمن الرحيم، السلام على الحسين، وعلى علي بن الحسين، وعلى أولاد الحسين، وعلى أصحاب الحسين...</p>
+      <p>...(نص الزيارة كامل سأكمله لك في الرد التالي حتى لا يكون النص طويلًا هنا جدًا)</p>
+    </div>
+  </section>
 
-<section id="photos">
-  <h2>التغطية الفوتوغرافية</h2>
-  <div class="gallery">
-    <img src="https://raw.githubusercontent.com/umalhassan99/umalhassan99.github.io/main/images/photo1.jpg" alt="صورة 1">
-    <img src="https://raw.githubusercontent.com/umalhassan99/umalhassan99.github.io/main/images/photo2.jpg" alt="صورة 2">
-    <img src="https://raw.githubusercontent.com/umalhassan99/umalhassan99.github.io/main/images/photo3.jpg" alt="صورة 3">
-    <img src="https://raw.githubusercontent.com/umalhassan99/umalhassan99.github.io/main/images/photo4.jpg" alt="صورة 4">
-    <img src="https://raw.githubusercontent.com/umalhassan99/umalhassan99.github.io/main/images/photo5.jpg" alt="صورة 5">
-    <img src="https://raw.githubusercontent.com/umalhassan99/umalhassan99.github.io/main/images/photo6.jpg" alt="صورة 6">
-  </div>
-</section>
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p><a class="social" href="https://www.instagram.com/umalhu7san?igsh=MXQzNmw4cGZsejZ6dQ==" target="_blank">انستغرام</a></p>
+    <p><a class="social" href="https://www.facebook.com/share/19HKZWxaoQ/?mibextid=wwXIfr" target="_blank">فيسبوك</a></p>
+    <p><a class="social" href="https://www.tiktok.com/@umalhu7san?_t=ZS-8woNTmtsrJY&_r=1" target="_blank">تيك توك</a></p>
+    <p><a class="social" href="https://t.me/umalhu7san" target="_blank">تليجرام</a></p>
+  </section>
 
-<section id="ashura">
-  <h2>زيارة عاشوراء</h2>
-  <p>
-    (تُكتب نص الزيارة الكامل هنا، سأكمله لاحقًا في الرسالة التالية بناءً على النسخة الكاملة التي أرسلتها)
-  </p>
-</section>
-
-<section id="contact">
-  <h2>تواصل معنا</h2>
-  <ul>
-    <li><a href="https://www.instagram.com/umalhu7san?igsh=MXQzNmw4cGZsejZ6dQ==" target="_blank">📸 إنستغرام</a></li>
-    <li><a href="https://www.facebook.com/share/19HKZWxaoQ/?mibextid=wwXIfr" target="_blank">📘 فيسبوك</a></li>
-    <li><a href="https://www.tiktok.com/@umalhu7san?_t=ZS-8woNTmtsrJY&_r=1" target="_blank">🎵 تيك توك</a></li>
-    <li><a href="https://t.me/umalhu7san" target="_blank">📢 تليجرام</a></li>
-  </ul>
-</section>
-
-<footer>
-  جميع الحقوق محفوظة &copy; موكب وحسينية أم الحسن عليها السلام - 2025
-</footer>
+  <footer>
+    جميع الحقوق محفوظة © 2025 – موكب وحسينية أم الحسن عليها السلام
+  </footer>
 
 </body>
 </html>
